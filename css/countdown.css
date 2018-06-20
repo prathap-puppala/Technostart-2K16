@@ -1,0 +1,166 @@
+/* reset */
+body{
+	 font-family: 'bebasregular';
+	 background:#00B3E7;
+}
+/* ---------- TIMER ---------- */
+.timer_wrap{
+	text-align:center;
+	-skrollr-animation-name: timer_wrap;
+}
+#counter {
+	height:120px;
+	font-size:40px;
+	color: #FFF;
+	overflow: hidden;
+}
+
+@-skrollr-keyframes timer_wrap
+{
+0 {
+		-webkit-transform: translate(-50%,-50%) scale(1);
+		-moz-transform: translate(-50%,-50%) scale(1);
+		-o-transform: translate(-50%,-50%) scale(1);
+		-ms-transform: translate(-50%,-50%) scale(1);
+		transform: translate(-50%,-50%) scale(1);
+		opacity: 1;
+	}
+	1000 { }
+	1500 {
+		opacity: 0;
+	}
+}
+.timer{
+	border-top:2px ridge #5F5F5F;
+	border-bottom:2px ridge #5F5F5F;
+}
+.timer h4{
+	font-size: 14px;
+	color: #E5E5E5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	margin-top: 20px;
+}
+.countDays, .countHours, .countMinutes, .countSeconds {
+    display: inline-block;
+    width: 86px;
+    height: 80px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.points {
+	float: left;
+	width:40px;
+	margin: 0;
+	font-size: 44px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 138px;
+	text-shadow: none;
+	color:#FFF;
+    display: none;
+}
+.boxName {
+	float: left;
+	width: 100%;
+	font-size: 15px;
+	color: #000;
+	font-style: italic;
+	font-weight: 600;
+	padding: 2px;
+}
+.countDays {
+    background: #A7D802;
+}
+.countHours{
+	background:#E9A300;
+}
+.countMinutes{
+	background:#F4C400;
+}
+.countSeconds{
+	background:#A12BB8;
+}
+/*---end-timer-----*/
+/*---start-notified----*/
+
+.notified{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 2em;
+	background:#FFF;
+}
+.notified input[type="text"]{
+	width: 73.5%;
+	padding:12px;
+	color:#888;
+	font-size:0.875em;
+	 font-family: 'bebasregular';
+	 border:none;
+	 outline:none;
+}
+.notified input[type="submit"]{
+	background:#000;
+	padding: 12px 41px;
+	border:none;
+	color:#FFF;
+	 font-family: 'bebasregular';
+	 cursor:pointer;
+	 transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+.notified input[type="submit"]:hover{
+	background:#555;
+}
+.notified form{
+	text-align:center;
+}
+/*----responsive-design-----*/
+@media only screen and (max-width: 1366px) and (min-width: 1280px) {
+
+	.notified {
+		width: 50%;
+	}
+	.notified input[type="text"] {
+		width: 74.5%;
+	}
+}
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+	
+	.notified {
+		width: 50%;
+	}
+	.notified input[type="text"] {
+		width: 73.5%;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+	
+	.notified {
+		width: 50%;
+	}
+	.notified input[type="text"] {
+		width: 65.5%;
+	}
+	ul#countdown span {
+		padding: 7px 30px;
+	}
+}
+@media only screen and (max-width: 768px) and (min-width: 640px) {
+	
+	.notified {
+		width: 63%;
+	}
+	.notified input[type="text"] {
+		width: 64.5%;
+	}
+	ul#countdown span {
+		padding: 7px 30px 0px 30px;
+	}
+	ul#countdown span {
+		font-size: 3em;
+	}
+}
